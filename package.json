@@ -4,7 +4,7 @@
   "description": "Platzigram REST",
   "scripts": {
     "lint": "standard",
-    "test": "npm run lint && ava"
+    "test": "npm run lint && ava test/**-test.js"
   },
   "standard": {
     "parser": "babel-eslint"
@@ -12,7 +12,8 @@
   "ava": {
     "require": [
       "babel-register"
-    ]
+    ],
+    "NODE_ENV": "test"
   },
   "babel": {
     "presets": [
