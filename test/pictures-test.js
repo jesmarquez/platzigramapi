@@ -87,7 +87,7 @@ test('secure POST /', async t => {
   let response = await request(options)
 
   t.is(response.statusCode, 201)
-  t.deepEqual(response.body, image)
+  t.deepEqual()
 })
 
 test('POST /:id/like', async t => {
