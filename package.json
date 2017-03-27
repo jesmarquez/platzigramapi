@@ -4,7 +4,8 @@
   "description": "Platzigram REST",
   "scripts": {
     "lint": "standard",
-    "test": "npm run lint && ava test/**-test.js"
+    "test": "npm run lint && ava test/**-test.js",
+    "build": "babel src -d trans"
   },
   "standard": {
     "parser": "babel-eslint"
@@ -36,6 +37,7 @@
   "homepage": "https://github.com/jesmarquez/platzigramapi#readme",
   "devDependencies": {
     "ava": "^0.17.0",
+    "babel-cli": "^6.24.0",
     "babel-eslint": "^7.1.1",
     "babel-plugin-transform-async-to-generator": "^6.22.0",
     "babel-plugin-transform-runtime": "^6.23.0",
