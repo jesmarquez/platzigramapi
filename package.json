@@ -14,7 +14,7 @@
     "require": [
       "babel-register"
     ],
-    "NODE_ENV": "test"
+    "NODE_ENV": "local"
   },
   "babel": {
     "presets": [
