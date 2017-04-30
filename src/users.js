@@ -33,7 +33,7 @@ hash.set('GET /:username', async function getUser (req, res, params) {
   await db.connect()
   let user = await db.getUser(username)
   user.avatar = gravatar.url(user.email)
-  
+
   delete user.email
   delete user.password
 

@@ -5,6 +5,7 @@ import micro from 'micro'
 import listen from 'test-listen'
 import request from 'request-promise'
 import users from '../users'
+import gravatar from 'gravatar'
 import fixtures from './fixtures'
 
 test.beforeEach(async t => {
@@ -39,6 +40,8 @@ test('POST /', async t => {
 test('GET /:username', async t => {
   let user = fixtures.getUser()
   let url = t.context.url
+
+  user.avatar = gravatar.url(user.email)
 
   let options = {
     method: 'GET',
